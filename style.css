@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@500&family=Roboto:wght@400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+     font-family: 'Lato', sans-serif;
+}
+/* utility classes */
+
+.container{
+    max-width: 1200px;
+    margin-inline: auto;
+}
+.flex{
+    display: flex;
+    align-content: center;
+}
+/* nav-bar */
+nav{
+    background-color: #F5F5F5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    min-height: 84px;
+}
+.main-navbar{
+    justify-content: space-between;
+    padding-block: 10px;
+}
+.company-logo img{
+    width: 120px;
+    height: 60px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.bars{
+    visibility: hidden;
+    cursor: pointer;
+}
+ul{
+    list-style: none;
+    gap:15px;
+    padding-block: 15px;
+    font-size: 1.2rem;
+}
+ul>li{
+    cursor: pointer;
+}
+
+.nav-links:hover{
+    color: blueviolet;
+}
+.nav-links:active{
+    color: red;
+}
+.search-bar{
+    gap:15px;
+    justify-content: center;
+    align-items: flex-start;
+    height: 40px;
+    margin-top: 10px;
+}
+#search-item{
+    width: 200px;
+    height: 100%;
+    padding-inline: 10px;
+    border-radius: 5px;
+    border: 2px solid #87949c;
+    font-family: 'Roboto', sans-serif;
+
+}
+#search-btn{
+    height: 100%;
+    padding-inline: 12px;
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 1.1rem;
+    border: none;
+    background-color: #3039e4;
+    color: white;
+    cursor: pointer;
+}
+#search-btn:hover{
+    background-color: #1D5D9B;
+}
+
+/* main-content */
+main{
+    margin-top: 110px;
+}
+.cards-container{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+}
+.cards{
+    width: 360px;
+    min-height: 400px;
+    border-radius: 6px;
+    box-shadow: 0 0 3px #EEEDED;
+    overflow: hidden;
+    transition: translateY 0.3s;
+}
+.cards:hover{
+    transform: translateY(-2px);
+    box-shadow: 1px 1px 5px #F2EAD3;
+    cursor: pointer;
+}
+.card-header img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.card-content{
+    padding: 10px 15px;
+}
+
+.news-source{
+    margin-block: 10px;
+}
+
+
+@media screen and ((width>=600px) and (width<=900px)){
+    .company-logo img{
+        width: 80px;
+        height: 50px;
+    }
+    
+    .company-items{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .container{
+        width: 95vw;
+
+    }
+    .main-navbar{
+        width: 100%;
+        font-size: 0.9rem;
+        justify-content: space-around;
+    }
+    main{
+        margin-top: 130px;
+    }
+    .cards-container{
+        justify-content: space-evenly;
+    }
+    .cards{
+        width: 340px;
+    }
+    #search-item{
+        width: 200px;
+    }
+    #search-btn{
+        font-size: 0.9rem;
+        margin-right: 4px;
+    }
+    .nav-list{
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+}
+@media screen and (max-width:600px){
+    .container{
+        width:300px;
+    }
+    .main-navbar{
+        flex-direction: column;
+        width: 100%;
+        margin-inline: 10px;
+    }
+    .nav-list{
+        flex-direction: column;
+        font-size: 0.9rem;
+        padding-block: 0px;
+
+    }
+    .main-bar{
+        margin-top: 180px;
+    }
+    .main-bar.active{
+        margin-top:320px;
+    }
+    .cards{
+        justify-content: center;
+    }
+    .company-items{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        /* align-content: center; */
+    }
+    .nav-list-ul{
+        margin-inline: auto;
+        margin-bottom: 4px;
+    }
+    .nav-list{
+        max-height: 0px;
+        overflow: hidden;
+        flex-wrap: wrap;
+    }
+    .nav-list.active{
+        max-height: fit-content;
+        /* justify-content: end; */
+    }
+    .bars{
+        visibility: visible;
+        margin-right: 30px;
+        margin-top: 30x;
+        height: 20px;
+        cursor: pointer;
+    }
+    }

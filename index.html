@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontline News</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="myfavicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/b4c55eb43b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="main-navbar container flex">
+            <div class="company-items flex">
+                <a href="#" class="company-logo"><img src="news-logo.png" alt="company-logo"></a>
+                <i class="fa-solid fa-bars bars"></i>
+            </div>
+            <div class="nav-list-ul">
+                <ul class="flex nav-list active">
+                    <li class="nav-links"  onclick="onNavItemClick('business')">Business</li>
+                    <li class="nav-links"  onclick="onNavItemClick('finance')">Finance</li>
+                    <li class="nav-links"  onclick="onNavItemClick('technology')">Technology</li>
+                    <li class="nav-links"  onclick="onNavItemClick('cricket')">Cricket</li>
+                    <li class="nav-links"  onclick="onNavItemClick('movies')">Entertainment</li>
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input type="text" name="search" id="search-item" placeholder="eg. Science">
+                <button class="search-btn" id="search-btn">Search</button>
+            </div>
+        </div>
+    </nav>
+    <main class="active main-bar">
+        <div class="cards-container container flex" id="card-container">
+        </div>
+    </main>
+    <template id="template-container">
+        <div class="cards">
+            <div class="card-header"><img src="https://via.placeholder.com/400x200" alt="card-image" id="card-image"></div>
+            <div class="card-content">
+                <h4 class="news-title" id="news-title">This is the title</h4>
+                <h5 class="news-source" id="news-source">Published by and time</h5>
+                <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur officia
+                    eius aut accusantium voluptatem et ducimus vitae deserunt, repellendus adipisci?</p>
+            </div>
+        </div>
+    </template>
+    
+    <script src="index.js"></script>
+</body>
+    
+</html>
